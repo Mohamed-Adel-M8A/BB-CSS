@@ -152,3 +152,60 @@
     color: #a4b4ff;
     background-color: #2a2a47;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Dark Mode CSS for Post Cards and Grid                      */
+/* -------------------------------------------------------------------------- */
+
+.dark-mode .edu-grid {
+  background-color: transparent; 
+}
+
+/* ------------------ بطاقة المنشور ------------------ */
+.dark-mode .post-card {
+  background: #2c2c4f; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  color: #e0e0e0;
+}
+
+.dark-mode .post-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* حاوية الصورة */
+.dark-mode .image-container {
+  background: #3b3b54;
+}
+
+/* عنوان المنشور */
+.dark-mode .post-title {
+  color: #a4b4ff;
+}
+
+/* بيانات الميتا الإضافية (التاريخ والكاتب) */
+.dark-mode .post-meta-footer {
+    color: #a0a0a0;
+    border-bottom: 1px dashed #4a4a70;
+}
+
+/* بيانات الميتا (التصنيفات) */
+.dark-mode .post-categories-list {
+  color: #7ab8ff;
+}
+.dark-mode .post-categories-list span {
+    background: #313155;
+    color: #9cdbff;
+    border: 1px solid #4a4a70;
+}
+
+/* ------------------ زر "عرض المزيد" ------------------ */
+.dark-mode #load-more {
+  background: #5d5d81;
+  color: #f1f1f1;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.dark-mode #load-more:hover {
+  background: #6a6a90;
+  box-shadow: 0 4px 10px rgba(100, 100, 150, 0.4);
+}
+
