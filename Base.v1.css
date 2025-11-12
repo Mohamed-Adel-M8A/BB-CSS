@@ -282,6 +282,105 @@ mark {
 }
 
 /* =========================
+   ✅ TOC
+========================= */
+
+#toc-post {
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.toc-toggler {
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.toc-toggler .dropdown-toggle {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    border-top: 5px solid #666;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+    margin-right: 10px;
+    transform: rotate(0deg); /* الوضع المغلق: سهم لأسفل */
+}
+
+/* تدوير السهم للأعلى عند الفتح */
+#toc-post.is-open .toc-toggler .dropdown-toggle {
+    transform: rotate(-180deg);
+}
+
+/* -------------------------------------- */
+/* منطق الإخفاء/الإظهار للقائمة الداخلية */
+/* -------------------------------------- */
+.toc-content-list {
+    /* الوضع الافتراضي: مغلق */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 15px;
+    transition: max-height 0.5s ease-out, opacity 0.4s ease-out;
+}
+
+#toc-post.is-open .toc-content-list {
+    /* حالة الفتح */
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: max-height 0.6s ease-in, opacity 0.5s ease-in;
+}
+
+/* -------------------------------------- */
+/* القوائم الداخلية والروابط */
+/* -------------------------------------- */
+#toc-post ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#toc-post > .toc-content-list > ul {
+    padding-right: 0;
+}
+
+#toc-post li {
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+#toc-post ul ul {
+    padding-right: 15px;
+    margin-top: 5px;
+}
+
+#toc-post a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+    padding: 3px 5px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    font-size: 0.95em;
+}
+
+#toc-post a:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+/* =========================
    ✅ Mobile scaling
 ========================= */
 
